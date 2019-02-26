@@ -1,0 +1,19 @@
+
+  
+{
+  "name": "tweetment",
+  "description": "Dashboard for Twitter sentiment analysis",
+  "repository": "https://github.com/SriSatyaLokesh/tweetment/",
+  "keywords": ["twitter","tweetment","sentiment","analysis","data science"],
+  "env": {
+    "APIAI_TOKEN": {
+      "description": "API.ai Client access token",
+      "value": "d1cdc2ceb63748eeb85f7ac3c45d5e71"
+    },
+    "APIAI_SESSION_ID": {
+      "description": "An arbitrary string",
+      "value": "b9564c7de72a47618337bbb147d78e2c"
+    }
+  },
+  "image": "heroku/nodejs"
+}
