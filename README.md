@@ -9,3 +9,4 @@ Analyses real time tweets from the twitter and categorizes them into positive,ne
   3. sh requirements.sh
 ### To run the Application     
 ####  python3 tweetment.py
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SriSatyaLokesh/tweetment/)
