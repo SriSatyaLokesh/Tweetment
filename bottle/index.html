@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+		<link rel="shortcut icon" href="static/img/favicon1.png" type="image/x-icon"/>
+    <title>Tweetment</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/main.css" rel="stylesheet">
+
+    <!-- Fonts from Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>	
+<link href="https://fonts.googleapis.com/css?family=Rancho|Audiowide|Kaushan+Script|Libre+Barcode+128+Text|Righteous|Handlee" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		<script>
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+						if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+								document.getElementById("myBtn").style.display = "block";
+						} else {
+								document.getElementById("myBtn").style.display = "none";
+						}
+				}
+				
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+						document.body.scrollTop = 0;
+						document.documentElement.scrollTop = 0;
+				}
+		</script>
+  </head>
+
+  <body>
+		<!-- go to top-->
+		<button onclick="topFunction()" class="btn btn-rounded"id="myBtn" title="Go to top">Top</button>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+					</button>
+          <a class="navbar-brand" href="#"><b>TWEETMENT</b></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+							<li><a href="#about">About</a></li>
+						<li><a href="#previous">Previous results</a></li>
+						<li><a href="#team">Testimonials</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row">		
+				<div class="col-lg-6">
+					<h1>Twitter Sentiment Analysis</h1>
+					<form class="form-inline" role="form" action="/result" method="post">
+					  <div class="form-group">
+							<input type="text" class="form-control" id="tweet_name" name="hashtag" placeholder="Enter Hashtag">
+						  <button type="submit" class="microphone"><i class="fa fa-microphone"></i></button>
+						</div>
+						<br><span id="break"> &nbsp;</span> <br>
+						<div class="form-group">
+							<input type="text" class="form-control" id="tweet_no" name="tweet_count" placeholder="Enter no. tweets">
+							<button type="submit" class="microphone"><i class="fa fa-microphone"></i></button>
+							</div>
+							<br>
+						<button type="submit" class="btn btn-warning btn-lg" id="analyise">Let's Analyise</button> 
+						
+					</form>					
+				</div><!-- /col-lg-6 -->
+
+				<div class="col-lg-6">
+					<img class="img-responsive" src="static/img/people1.png" alt="">
+				</div><!-- /col-lg-6 -->
+				
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+	
+	<div class="container" id="about">
+            
+		<div class="row" >
+                <h1>About</h1>
+			 <p id="about_text"> &ensp; &ensp; &ensp;  The main focused area of our project is to analyse the sentiment in the twitter news feed based on the keyword or hashtag.
+				  We are just just extracting number of tweets and supplying them to a machine learning model in order to analyse the sentiment such as positive,negative percentages in those tweets.It is purely educational purpose no business model involved in it. We are using basically machine learning and neural networking python modules to analyse the tweets using tweepy library provided as a support in the python.
+				 Our use case never and ever requires the actions like tweeting,retweeting,liking and e.t.c. We just collect the public tweets posted the news-feed around the world.
+				We will never display the content belongs to the twitter out of it. We will just plot our analysed sentiment as a Pie chart for sophisticated user experience.
+				</p>
+		</div><!-- /row -->
+    </div><!-- /container -->
+    
+	<div class="container" id="previous">
+		<div class="row mt centered">
+				<h1>Previous Tweetment Results</h1>
+			
+			</div>
+		</div><!-- /row -->
+	
+		<!-- CAROUSEL -->
+		<div class="row mt centered" >
+			<div class="col-lg-6 col-lg-offset-3">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					<!--	<li data-target="#carousel-example-generic" data-slide-to="4"></li> -->
+				  </ol>
+				
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+				    <div class="item active">
+				      <img src="static/img/p02.png" alt="">
+				    </div>
+				    <div class="item">
+				      <img src="static/img/p01.png" alt="">
+				    </div>
+				    <div class="item">
+				      <img src="static/img/p04.png" alt="">
+						</div>
+						<div class="item">
+								<img src="static/img/p03.png" alt="">
+							</div>
+				  </div>
+				</div>			
+			</div><!-- /col-lg-8 -->
+		</div><!-- /row -->
+	</div> <!--/container -->
+	
+	<div class="container" id="team">
+			<div class="row mt centered">
+		<div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>Our Team</h1>
+			</div>
+		</div><!-- /row -->
+		
+		<div class="row mt centered">
+			<div class="col-lg-3">
+				<img class="img-circle" src="static/img/satya.jpeg" width="140" alt="">
+				<h4>K Sri Satya Lokesh </h4>
+
+				<p>
+					<a href="mailto: srisatyalokesh2.12@gmail.com" target="_blank"> <i class="fa fa-envelope" ></i> </a>
+					<a href="https://twitter.com/SriSatyaLokesh3" target="_blank"> <i class="fa fa-twitter" i></i> </a>
+					<a href="https://www.facebook.com/srisatyalokesh2.12" target="_blank"> <i class="fa fa-facebook-f" ></i> </a>
+				</p>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-3">
+					<img class="img-circle" src="static/img/sidhu.jpeg" width="140" alt="">
+					<h4>K Siddhardha</h4>
+					<p>
+							<a href="mailto: siddhardhakommineni@gmail.com" target="_blank"> <i class="fa fa-envelope" ></i> </a>
+							<a href="https://twitter.com/siddhardha_22" target="_blank"> <i class="fa fa-twitter" i></i> </a>
+							<a href="https://www.facebook.com/siddhardha.chowdary.1" target="_blank"> <i class="fa fa-facebook-f" ></i> </a>
+					</p>
+					
+				</div><!--/col-lg-4 -->
+			<div class="col-lg-3">
+				<img class="img-circle" src="static/img/ruthvik.jpeg" width="140" alt="">
+				<h4>K Ruthvik Reddy</h4>
+				<p>
+						<a href="mailto: ruthvikkawkuntla@gmail.com" target="_blank"> <i class="fa fa-envelope" ></i> </a>
+						<a href="https://twitter.com/Ruthvik44069608" target="_blank"> <i class="fa fa-twitter" i></i> </a>
+						<a href="https://www.facebook.com/profile.php?id=100009389982961" target="_blank"> <i class="fa fa-facebook-f" ></i> </a>
+				</p>
+			
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-3">
+				<img class="img-circle" src="static/img/kalyan.jpeg" width="140" alt="">
+				<h4>P Kalyan Bhushan</h4>
+				<p>
+						<a href="mailto: kalyanpodila123@gmail.com" target="_blank"> <i class="fa fa-envelope" ></i> </a>
+						<a href="https://twitter.com/KalyanPodila" target="_blank"> <i class="fa fa-twitter" i></i> </a>
+						<a href="https://www.facebook.com/kalyan.podila.3" target="_blank"> <i class="fa fa-facebook-f" ></i> </a>
+				</p>
+			</div><!--/col-lg-4 -->
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+	
+	<div id="footerwrap">
+			<div class="container">
+				<div class="row mt centered">		
+					<h1>TWEETMENT</h1>
+					<h3>Twitter Sentiment Analysis</h3>
+					<p id="copyrights">&copy; Tweetment. All Rights Reserved 2018</p>
+					</div>
+					</div>
+					</div>
+		
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>

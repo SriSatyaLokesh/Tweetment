@@ -1,0 +1,242 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: FLATTY - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+
+body {
+  background-color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+   /* font-family: 'Almendra', sans-serif; */
+   /*font-family: 'Righteous', cursive;*/
+   font-family: 'Kaushan Script', cursive;
+   margin-bottom: 250;
+    color: #333;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h3 {
+	color: #95a5a6;
+	font-weight: 400;
+}
+
+h4 {
+	color: #95a5a6;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.navbar-default {
+	background-color:#00aced;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+    font-family: 'Audiowide', cursive;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    font-family: 'Rancho', cursive;
+    font-size: 22px;
+    
+}
+
+/* Helpers */
+
+.mt {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.form-control {
+	height: 42px;
+	font-size: 18px;
+    width: 280px;
+    appearance: textfield;
+}
+.microphone{
+    height: 20px;
+    width: 50px;
+    border: 0px solid white;
+    background-color: white;
+}
+i {
+	margin: 8px;
+	color: #00aced; 
+}
+.form-group{
+    background-color: white;
+    border-radius: 4px;
+}
+#analyise{
+    margin-top: 10px;
+    background-color: orangered;
+    color: white;
+}
+#break{
+   padding:5px;
+}
+/* HeaderWrap */
+#headerwrap {
+	/* background: url(../img/bg01.jpg) no-repeat center top; */
+	background-color:#00aced;
+	margin-top: -20px;
+	padding-top: 150px;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#headerwrap h1 {
+	margin-top: 60px;
+	margin-bottom: 15px;
+	color: white;
+	font-size: 45px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+#footerwrap {
+	background-color:#00aced;
+	margin-top: -20px;
+	padding-top:40px;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 250px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#footerwrap h1 {
+    font-family: 'Audiowide', cursive;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: white;
+	font-size: 40px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+#footerwrap h3 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: white;
+	font-size: 45px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: 2px solid #f2f2f2;
+    outline: none;
+    background-color:#00aced;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+  }
+  
+  #myBtn:hover {
+    background-color:white;
+    color:#00aced;
+    border: 2px solid #00aced;
+  }
+  #buttons{
+    display: inline;
+
+  }
+.cont1{
+    margin-top:1%;
+
+}
+#result-image{
+    width: 600px;
+    
+}
