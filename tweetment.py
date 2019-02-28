@@ -159,20 +159,20 @@ def tweetment(hashtag,tweet_count):
 
     # Equal aspect ratio ensures that pie is drawn as a circle
     plt.axis('equal')  
-    files= os.listdir('/home/sid/tweetment/Tweetment/static/img')
+    files= os.listdir('static/img')
     if 'result.png' in files:
-        os.remove('/home/sid/tweetment/Tweetment/static/img/result.png')
+        os.remove('static/img/result.png')
     fig2 = plt.gcf()
-    fig2.savefig('/home/sid/tweetment/Tweetment/static/img/result.png',bbox_inches="tight",dpi=400,transparent=True)
+    fig2.savefig('static/img/result.png',bbox_inches="tight",dpi=400,transparent=True)
     return results
 
 #home() serves the home page(i.e index.html
 
 @app.route('/')
 def home():
-    files= os.listdir('/home/sid/tweetment/Tweetment/static/img/')
+    files= os.listdir('static/img/')
     if 'result.png' in files:
-        os.remove('/home/sid/tweetment/Tweetment/static/img/result.png')
+        os.remove('static/img/result.png')
     return render_template("index.html")
 
 
