@@ -46,6 +46,20 @@
   </head>
 
   <body>
+	  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id='bodybox'>
+  <div id='botchat'>
+       <label> <b>Bot :</b> Hello!  </label> <br>
+  </div>
+    <div>
+         <input type="text" name="chat" id="usertext" placeholder="Hi there! Type here to talk to me."  onkeypress="isEnter(event)">
+        <button type="button" class="send" onclick="respond()"> <i class="fa fa-paper-plane"></i></button>
+    </div>
+    </div>
+    </div>
+	    <button href="NewsBuddy/chatbot.html" id="chat" title="ChatBot" onclick="openNav()">CHAT</button>
+
 		<!-- go to top-->
 		<button onclick="topFunction()" class="btn btn-rounded"id="myBtn" title="Go to top">Top</button>
 

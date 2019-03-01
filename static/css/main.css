@@ -6,6 +6,102 @@
  * Version: 1.0
  * URL: http://blacktie.co
  */
+  #chat {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+ 
+   animation: roll 2s infinite;
+  transform: rotate(90deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#chat:hover {
+  background-color: white;
+  color: black;
+}
+
+/*chatbot*/
+
+#bodybox {
+  margin: auto;
+  max-width: 550px;
+  height: 75%;
+  font: 15px arial, sans-serif;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 15px;
+
+}
+
+#botchat {
+  border-style: solid;
+  background-color: #f6f9f6;
+  border-width: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+     height: 80%;
+    overflow: auto;
+ font-family: monospace;
+    line-height: normal;
+}
+
+.chatlog {
+   font: 15px arial, sans-serif;
+}
+
+#usertext {
+  font: 17px arial, sans-serif;
+  height: 30px;
+  width: 450px;
+    border: none;
+  border-bottom: 2px solid black;
+  margin-left: 15px;
+  background-color: inherit;
+    padding: 5px;
+    border-radius: 5px;
+}
+.send{
+    background-color: black;
+     color: white;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px;
+      width: 50px;
+}
+/*chat*/
 
 body {
   background-color: #f2f2f2;
