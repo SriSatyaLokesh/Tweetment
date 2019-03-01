@@ -3,8 +3,7 @@ import os
 import sys,tweepy,csv,re
 from textblob import TextBlob
 import matplotlib.pyplot as plt
-import speech_recognition as sr
-import pyaudio
+
 
 
 app = Flask(__name__)
@@ -26,33 +25,13 @@ def tweetment(hashtag,tweet_count):
 
     #temp=input("Press 0/v/V for voice input for Text input:")
             
-    if  1 < 0 :
-        r = sr.Recognizer()
-        searchTerm=""
-        with sr.Microphone() as source:
-            print("Speak Keyword/Tag to search about:")
-            words = r.listen(source)        
-            try:
-                searchTerm = r.recognize_google(words)
-                print("We are searching for:",searchTerm)             
-            except:
-                print("Sorry could not recognize what you said please enter manually......")
-                searchTerm = input("Enter Keyword/Tag to search about: ")            
-                
-            print("how many tweets to search: ")
-            nos=r.listen(source)        
-            try:
-                NoOfTerms=int(r.recognize_google(nos))
-                print("Total no of tweets:",NoOfTerms)
-            except:
-                print("Sorry could not recognize what you said please enter manually......")
-                NoOfTerms = int(input("Enter how many tweets to search: "))        
+       
             
-    else:       
-        searchTerm = str(hashtag)
-        NoOfTerms = int(tweet_count)
-        print(searchTerm)
-        print(NoOfTerms)
+           
+    searchTerm = str(hashtag)
+    NoOfTerms = int(tweet_count)
+    print(searchTerm)
+    print(NoOfTerms)
         
 
     print("ANALYSING...............................................................!!!!!!")
