@@ -43,9 +43,52 @@
 						document.documentElement.scrollTop = 0;
 				}
 
-				function voice2() {
-					alert("Group of mokeys working on it....");
-				}
+				
+				
+
+
+	//Sppech Input
+	function start_voice(id){
+        
+
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+
+        var grammar = '#JSGF V1.0;'
+
+        var recognition = new SpeechRecognition();
+        var speechRecognitionList = new SpeechGrammarList();
+        speechRecognitionList.addFromString(grammar, 1);
+        recognition.grammars = speechRecognitionList;
+        recognition.lang = 'en-IN';
+        recognition.interimResults = false;
+	recognition.start();
+        recognition.onresult = function(event) {
+            var last = event.results.length - 1;
+            var command = event.results[last][0].transcript;
+            
+	    if ( String(id) == "voice_btn1"){
+            document.getElementById("tweet_name").value = ''+command+'';
+		}
+	 if ( String(id) == "voice_btn2"){
+            document.getElementById("tweet_no").value = ''+command+'';
+		}
+            
+        };
+
+        recognition.onspeechend = function() {
+            recognition.stop();
+        };
+
+        recognition.onerror = function(event) {
+            alert('Be clear and louder: ' + event.error);
+	    
+        }        
+	}
+	//Speech Input Ends
+
+
+
 		</script>
   </head>
 
@@ -82,12 +125,12 @@
 					<form class="form-inline" role="form" action="/result" method="post">
 					  <div class="form-group">
 							<input type="text" class="form-control" id="tweet_name" name="hashtag" placeholder="Enter Hashtag">
-						  <button type="button" onclick="voice2()" class="microphone"><i class="fa fa-microphone"></i></button>
+						  <button type="button" onclick="start_voice(this.id)" class="microphone" id="voice_btn1"><i class="fa fa-microphone"></i></button>
 						</div>
 						<br><span id="break"> &nbsp;</span> <br>
 						<div class="form-group">
 							<input type="text" class="form-control" id="tweet_no" name="tweet_count" placeholder="Enter no. tweets">
-							<button type="button" onclick="voice2()" class="microphone"><i class="fa fa-microphone"></i></button>
+							<button type="button" onclick="start_voice(this.id)" class="microphone" id="voice_btn2"><i class="fa fa-microphone"></i></button>
 							</div> 
 							<br>
 						<button type="submit" class="btn btn-warning btn-lg" id="analyise">Let's Analyise</button> 
