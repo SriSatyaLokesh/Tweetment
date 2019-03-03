@@ -3,7 +3,7 @@ import os
 import sys,tweepy,csv,re
 from textblob import TextBlob
 import matplotlib.pyplot as plt
-
+from nocache import nocache
 
 
 app = Flask(__name__)
@@ -148,6 +148,7 @@ def tweetment(hashtag,tweet_count):
 #home() serves the home page(i.e index.html
 
 @app.route('/')
+@nocache
 def home():
     files= os.listdir('static/img/')
     if 'result.png' in files:
@@ -161,6 +162,7 @@ def send_static(filename):
     return static_file(filename, root = 'static/')'''
 
 @app.route("/result",methods = ['POST'])
+@nocache
 def analyize():
     if request.method == "POST":
         hashtag = request.form["hashtag"]
@@ -171,4 +173,4 @@ def analyize():
     return render_template("result.html",results=res)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
+    app.run(host="0.0.0.0",debug=True, port=int(os.environ.get('PORT', 5000)))
